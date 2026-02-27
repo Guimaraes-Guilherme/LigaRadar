@@ -1,0 +1,26 @@
+.card-hover:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+  }
+  
+  .sport-card-f1 {
+    background: linear-gradient(135deg, #ff0000, #7a0000);
+    color: white;
+  }
+  
+  .sport-card-football {
+    background: linear-gradient(135deg, #00c853, #00695c);
+    color: white;
+  }
+  
+  .text-gradient-f1 {
+    background: linear-gradient(to right, red, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .text-gradient-football {
+    background: linear-gradient(to right, green, lime);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

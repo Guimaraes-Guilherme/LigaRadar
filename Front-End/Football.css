@@ -1,0 +1,64 @@
+.tabs {
+
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    
+    }
+    
+    .tab-button {
+    
+    background: #1f2937;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    }
+    
+    .tab-button:hover {
+    
+    background: #374151;
+    
+    }
+    
+    .tab-button.active {
+    
+    background: linear-gradient(135deg, #00c853, #00695c);
+    
+    }
+    
+    
+    /* Match */
+    
+    .match-card {
+    
+    background: linear-gradient(135deg, #00c853, #00695c);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    
+    .team {
+    
+    font-weight: bold;
+    
+    }
+    
+    .match-time {
+    
+    font-size: 20px;
+    font-weight: bold;
+    
+    }
+    
+    .hidden {
+    
+    display: none;
+    
+    }
