@@ -1,9 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from services.football_service import get_matches_by_league
-from fastapi import FastAPI
+from datetime import datetime
+
 
 app = FastAPI()
+
+CURRENT_SEASON = datetime.now().year -1
 
 # Liberar acesso do frontend
 app.add_middleware(
@@ -32,9 +35,13 @@ def get_league_matches(league_name: str):
     if not league_id:
         return {"error": "Liga não encontrada"}
 
-    data = get_matches_by_league(league_id, 2024)
+    data = get_matches_by_league(league_id, CURRENT_SEASON)
 
-    return data
+    return {
+        "liga": league_name,
+        "league_id": league_id,
+        "dados": data["response"]
+    }
 
 @app.get("/")
 def home():

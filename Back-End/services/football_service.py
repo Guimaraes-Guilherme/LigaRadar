@@ -1,5 +1,6 @@
 import requests
 import os
+from datetime import datetime
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -18,7 +19,7 @@ def get_matches_by_league(league_id: int, season: int):
 
     params = {
         "league": league_id,
-        "season": season
+        "season": datetime.now().strftime("%Y-%m-%d")
     }
 
     response = requests.get(url, headers=HEADERS, params=params)
